@@ -1,0 +1,115 @@
+
+{% extends 'base.html' %}
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/Style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <title>Nosotros</title>
+</head>
+{% block content %}
+
+<body>
+
+ <header id ="header"></header>
+
+  <div class="container">
+    <div class="d-flex justify-content-center">
+     <p>
+      <h1>Sobre Nosotros</h1>
+     </p>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row d-flex">
+      <div class="box w-100 text-center">
+        <p class="p-nosotros">
+        Los Kiltros es la tienda online más compleja para mascotas creada por pet lovers para pet lovers!.
+        Somos la tienda en linea de mascotas con mayor variedad de productos y servicios a domicilio, contamos con
+        más de 4.000 productos (alimentos, dietas naturales, snacks, medicinas, higiene, y accesorios).
+
+     
+ 
+        Nuestro emprendimiento es sin fines de lucro, y estamos dedicados a la manutención de animales en peligro
+        de maltrato.
+  
+      
+      
+       Siempre estamos preocupados por la salud y bienestar de tus mascotas y las que cuidamos en nuestra fundación.
+  
+      
+        
+        Tanto tu mascota como las que acogmeos son lo más importante para nosotros. Nos esforzamos dia a dia por dar la
+        mejor experiencia y servicio a los pet lovers y para que a tus peluditos no les falte nada para su cuidado y salud.
+    
+      
+        
+        En Chile, llegamos a todo Santiago y próximamente estaremos con cobertura nacional. Tenemos entregas el mismo dia
+        en 3 rutas diferentes para que elijas la que más te conviene, si pides antes de las 5 pm te llega el mismo dia.
+        También tenemos envíos nacionales con tiempos de entrega de 3 días hábiles. Contamos con todos los métodos de
+        pago: efectivo, datafono, pagos online y lo más importante: muy buenos precios.
+      
+      
+      
+        Desde Los Kiltros apoyamos y colaboramos orgánicamente y de forma activa con el rescate y adopción animal, es por
+        esto que donamos la mayor parte de nuestras ventas mensualmente a esta causa. Para nosotros es primordial la integridad
+        y bienestar de las mascotas, y por eso te invitamos a subscribirte con una cuota mensual de $3.000 y con ello obtener un
+        5% de descuento en todas tus compras.
+       </p>
+      </div>
+    </div>
+  </div>
+
+  
+
+        <div class="container">
+            <div class="row justify-content-center">
+              <div class="card" style="width: 20rem;">
+                <img src="{% static 'core/images/persona1.jpg' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text"><ul class="demo">
+                  <li><b>Cecilia Ugarte</b></li>
+                  <li>Gerente General</li>
+                  <li>cugarte@losk.cl</li></ul></p>
+                </div>
+              </div>
+                
+              <div class="card" style="width: 20rem;">
+                <img src="{% static 'core/images/persona2.jpg' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text"><ul class="demo">
+                  <li><b>Carlos Gonzalez</b></li>
+                  <li>Marketing</li>
+                  <li>cgonz@losk.cl</li></ul></p>
+                </div>
+              </div>
+              <div class="card" style="width: 20rem;">
+                <img src="{% static 'core/images/persona3.jpg' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text"><ul class="demo">
+                  <li><b>Diego Miranda</b></li>
+                  <li>Atención a Clientes</li>
+                  <li>dmiranda@losk.cl</li></ul></p>
+                </div>
+              </div>
+            </div>
+         </div>
+    
+    <footer id ="footer"></footer>   
+    <!--Bibliotecas-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="JS/headerYFooter.js"></script>  
+
+</body>
+{% endblock content %}
+</html>
+
+

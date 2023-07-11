@@ -1,0 +1,220 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'CSS/Forms.css' %}" />
+  <title>Tienda de Mascotas</title>
+</head>
+
+{% block content %}
+
+<body>
+  <!--Header cargado-->
+  <header id ="header"></header>
+  <!--Carousel-->
+
+  <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel" data-bs-theme="light">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3" class="active" aria-current="true"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>
+        <div class="container">
+          <div class="carousel-caption text-start">
+            
+            <p class="opacity-75">Registrate y obtén descuentos</p>
+            <p><a class="btn btn-lg btn-primary" href="{% url 'registro' %}">Registrate hoy</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>
+        <div class="container">
+          <div class="carousel-caption">
+            <p>Otros Productos esperandote</p>
+            <p><a class="btn btn-lg btn-primary" href="{% url 'tienda' %}">Tienda Fakestore</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item active">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>
+        <div class="container">
+          <div class="carousel-caption text-end">
+            <p>Un equipo listo para servirte</p>
+            <p><a class="btn btn-lg btn-primary" href="{% url 'nosotros' %}">¿Quienes somos?</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+  <!--Ofertas Imperdibles-->
+  <div class="row w-100 text-center text-white opacity-75" style="background-color: darkmagenta">
+    <p class="p-ofertas">OFERTAS IMPERDIBLES</p>
+  </div>
+
+
+
+  <!--Productos-->
+
+{% load humanize %}
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12 col-md-4 col-lg-4">
+        <p class="p-inicio">
+          <ul class="demo">
+            <li><a href="{%url 'tienda' %}">TIENDA DE ROPA</a></li>
+          </ul>
+        </p>
+      </div>
+
+
+
+
+      <div class="productos">
+        {% for p in productos %}
+
+        <div class="producto">
+          <div class="contenedor_producto">
+            {% if p.imagen %}
+            <img src="{{ p.imagen.url }}" alt="imagen producto">
+            {% endif %}
+            <div class="detalle">
+                <li><a href="Ficha.html">EN STOCK</a></li>
+                <h5>{{p.categoria | capfirst}}</h5>
+                <h2>{{p.nombre | title }}</h2>
+                <h3>{{p.precio | intcomma }}</h3>
+            </div>
+
+        
+          </div>
+
+        </div>
+
+      </div>
+      {% endfor %}
+
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12 col-md-4 col-lg-4">
+        <img src="{% static 'images/cpp 1.jpg' %}">
+        <p class="p-inicio">
+          <ul class="demo">
+            <li><a href="Ficha.html">EN STOCK</a></li>
+            <li>COMIDA PERRO PEDIGREE</li>
+            <li>PRECIO: 24.000</li>
+          </ul>
+        </p>
+      </div>
+      <div class="col-sm-12 col-md-4 col-lg-4">
+        <img src="{% static 'core/images/cpp2.jpg' %]">
+        <p class="p-inicio">
+          <ul class="demo">
+            <li>EN STOCK</li>
+            <li>COMIDA PERRO CHAMPION DOG</li>
+            <li>PRECIO: 24.000</li>
+          </ul>
+        </p>
+      </div>
+      <div class="col-sm-12 col-md-4 col-lg-4">
+        <img src="IMG/cpp3.jpg">
+        <p class="p-inicio">
+          <ul class="demo">
+            <li>AGOTADO</li>
+            <li>COMIDA PERRO DOGCHOW</li>
+            <li>PRECIO: 24.000</li>
+          </ul>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12 col-md-4 col-lg-4">
+        <img src="IMG/cpp 1.jpg">
+        <p class="p-inicio">
+          <ul class="demo">
+            <li>EN STOCK</li>
+            <li>COMIDA PERRO PEDIGREE</li>
+            <li>PRECIO: 24.000</li>
+          </ul>
+        </p>
+      </div>
+      <div class="col-sm-12 col-md-4 col-lg-4">
+        <img src="IMG/cpp2.jpg">
+        <p class="p-inicio">
+          <ul class="demo">
+            <li>EN STOCK</li>
+            <li>COMIDA PERRO CHAMPION DOG</li>
+            <li>PRECIO: 24.000</li>
+          </ul>
+        </p>
+      </div>
+      <div class="col-sm-12 col-md-4 col-lg-4">
+        <img src="IMG/cpp3.jpg">
+        <p class="p-inicio">
+          <ul class="demo">
+            <li>AGOTADO</li>
+            <li>COMIDA PERRO DOGCHOW</li>
+            <li>PRECIO: 24.000</li>
+          </ul>
+        </p>
+      </div>
+    </div>
+  </div>
+
+ 
+<hr>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-6 text-center">
+        <h2>Tienda Fakeapistore.com</h2>
+        <a href="{% url 'tienda' %}" class="btn btn-darkmagenta">Ir a Ofertas</a>
+      </div>
+    </div>
+  </div>
+  
+  
+
+  
+
+  
+
+  <footer id ="footer"></footer>
+
+  <!-- Bibliotecas--> 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+  <script src="JS/headerYFooter.js"></script>
+ 
+
+  
+
+</body>
+
+{% endblock content %}
+
+</html>
+

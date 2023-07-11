@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="CSS/Style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+  <script src="JS/Script.js"></script>
+  <title>Bodega</title>
+</head>
+
+<body>
+
+  <header id="header"></header>
+
+
+
+  <h1>Mantenedor de Bodega</h1>
+
+
+
+  <div class="container-fluid">
+    <form method="POST" id="formulario1" action="recibir_datos">
+      <div class="col-md-6">
+
+        <div class="col-md-4">
+          <label for="inputRegion" class="form-label">Categoria</label>
+          <select id="inputRegion" class="form-select">
+            <option selected>Seleccione una Categoria</option>
+            <option>Perro</option>
+            <option>Gatos</option>
+            <option>Hamsters</option>
+            <option>Aves</option>
+            <option>Reptiles</option>
+            <option>Accesorios</option>
+            <option>Juguetes para Mascotas</option>
+          </select>
+        </div>
+
+        <div class="col-md-4">
+          <label for="inputRegion" class="form-label">Nombre</label>
+          <select id="inputRegion" class="form-select">
+            <option selected>Seleccione un Producto</option>
+            <option>Saco comida para Perro 3kg</option>
+            <option>Saco comida para Gatos 5Kg</option>
+            <option>Semillas para Hamsters 1Kg</option>
+
+          </select>
+        </div>
+
+        <div class="col-md-2">
+          <label for="inputZip" class="form-label">Cantidad</label>
+          <input type="number" class="form-control" id="codigo" name="cantidad">
+        </div>
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary">Nuevo</button>
+          <button type="submit" class="btn btn-primary">Agregar</button>
+        </div>
+    </form>
+  </div>
+
+
+
+
+
+  <table class="table table-hover">
+    <tr>
+      <th>ID</th>
+      <th>Categoria</th>
+      <th>Nombre</th>
+      <th>Estado</th>
+      <th>Opciones</th>
+    </tr>
+    <tr>
+      <td>423</td>
+      <td>Perro</td>
+      <td>Saco comida para Perro 3Kg</td>
+      <td>Vendido</td>
+      <td>Eliminar</td>
+    </tr>
+    <tr>
+      <td>521</td>
+      <td>Gato</td>
+      <td>Saco comida para Gato 5Kg</td>
+      <td>En Bodega</td>
+      <td>Eliminar</td>
+    </tr>
+
+    <tr>
+      <td>128</td>
+      <td>Hamsters</td>
+      <td>Semillas para Hamsters 1Kg</td>
+      <td>Entregado</td>
+      <td>Eliminar</td>
+    </tr>
+
+
+
+  </table>
+
+
+
+
+
+
+  <!-- Footer -->
+  <footer id="footer"></footer>
+  
+    <!-- Bibliotecas--> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+  <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.10.0/jquery.validate.min.js"></script>
+  <script src="js/Validate.js" type="text/javascript"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+    <script src="JS/headerYFooter.js"></script>
+
+
+</body>
+
+</html>

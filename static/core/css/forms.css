@@ -1,0 +1,184 @@
+#formulario label {
+    width: 150px;
+}
+
+
+.btnwidth {
+    width: 90px;
+}
+
+
+#tabla_datos {
+    width: 100%;
+    margin: auto;
+    border-collapse: collapse;
+    border: 1px solid gray;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+
+#tabla_datos th, td {
+    border: 1px solid gray;
+    padding: 5px;
+}
+
+
+#tabla_datos th {
+    background-color: lightgray;
+    color: black;
+}
+
+
+#tabla_datos tr:nth-child(even) {
+  background-color: lightgray;
+}
+
+
+.titulo_boton {
+    width: 65;
+}
+
+
+.boton_chico {
+    font-size: 0.7em;
+    width: 60px;
+}
+
+
+#form_message {
+    margin-top: 20px;
+}
+
+
+.mini_auto {
+    width: 100px;
+}
+
+
+.tienda_auto_recuadro {
+    width: 250px;
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+    border: 5px outset #1C6EA4;
+}
+
+
+.tienda_auto_imagen {
+    width: 200px;
+    margin:auto;
+}
+
+
+.tienda_auto_recuadro_interior {
+    width: 205px;
+    height: 155px;
+    /* border:1px solid blue; */
+    margin:auto;
+}
+
+
+.tienda_link_home {
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+.ficha_auto_recuadro {
+    padding:10px;
+    border: 5px outset #1C6EA4;
+}
+
+
+.ficha_auto_imagen {
+    width: 100%;
+    margin:auto;
+}
+
+
+.ficha_datos_recuadro {
+    padding:10px;
+}
+
+
+.error {
+    color: red;
+    font-weight: bolder;
+ }
+
+ .bg-darkmagenta {
+    background-color: darkmagenta;
+  }
+
+  .btn-darkmagenta {
+   background-color: darkmagenta;
+   
+   color: darkmagenta;
+
+ }
+
+ .is-invalid {
+  border-color: red;
+}
+
+.error-message {
+  color: red;
+  margin-top: 5px;
+  display: none;
+}
+
+.error-input {
+  border: 1px solid red;
+}
+
+.error-email {
+  display: none;
+}
+
+
+.demo {
+    list-style: none;
+}
+
+.card-img-top {
+  object-fit: cover;
+  height: 300px;
+}
+.card-body {
+  background-color: #f8f9fa;
+}
+.logo {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.hr-hidden {
+  margin-top: 30px;
+  border: none;
+}
+
+.p-nosotros {
+  text-align: justify;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+  
+.container footer-container {
+  flex-grow: 1;
+}
+
+.centered-image {
+  display: block;
+  margin: 0 auto;
+  width: 2px !important;
+  height: auto !important;
+  max-width: 40% !important;
+  max-height: 40% !important;
+}

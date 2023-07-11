@@ -1,0 +1,8 @@
+<h1>Tienda</h1>
+<ul>
+    {% for product in products %}
+        <li>{{ product.title }}</li>
+        <li>{{ product.price }}</li>
+        <!-- Otros campos del producto -->
+    {% endfor %}
+</ul>

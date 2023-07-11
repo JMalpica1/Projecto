@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="CSS/Style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <title>Mantenedor de Productos</title>
+</head>
+
+<body>
+
+  <header id="header"></header>
+  <hr class="hr-hidden">
+  <div class="container">
+    <div class="d-flex justify-content-center">
+      <h1>Mantenedor de Productos</h1>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <form action="row g-3 needs-validation" method="POST" id="formulario1" action="recibir_datos">
+              <div class="mb-3 fw-bold">
+                <label for="inputId" class="form-label">ID</label>
+                <input type="number" name="id" class="form-control" id="id">
+              </div>
+
+              <div class="col-md-6 fw-bold">
+                <label for="inputCategoria" class="form-label">Categoria</label>
+                <select class="form-select" name="categoria" aria-label="Categoria">
+                  <option selected>Perro</option>
+                  <option value="1">Gato</option>
+                  <option value="2">Loro</option>
+                  <option value="3">Hamster</option>
+                </select>
+              </div>
+
+              <div class="mb-3 fw-bold">
+                <label for="inputId" class="form-label">Descripción</label>
+                <textarea rows="4" cols="50" name="descripcion" class="form-control" id="descripcion"></textarea>
+              </div>
+
+              <div class="mb-3 fw-bold">
+                <label for="inputId" class="form-label">Precio</label>
+                <input type="number" name="precio" class="form-control" id="precio">
+              </div>
+
+              <div class="mb-3 fw-bold">
+                <label for="inputId" class="form-label">Descuento Suscriptor</label>
+                <input type="number" name="descuentosus" class="form-control" id="descuentosus" placegolder="5">
+              </div>
+
+              <div class="mb-3 fw-bold">
+                <label for="inputId" class="form-label">Descuento Oferta</label>
+                <input type="number" name="descuentof" class="form-control" id="descuentof" placeholder="2">
+              </div>
+
+              <table>
+                <tr>
+                  <td>
+                    <img src="img/user-profile.png" alt="" class="user-image">
+                  </td>
+                </tr>
+                <tr>
+                  <td><input type="file" class="form-control"></td>
+                </tr>
+              </table>
+
+              <div class="col-12">
+                <button type="submit" class="btn btn-primary">Guardar</button>
+                <button type="submit" class="btn btn-primary">Nuevo</button>
+                <button type="submit" class="btn btn-primary">Eliminar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <hr class="hr-hidden">
+    <div class="container">
+      <div class="d-flex justify-content-center">
+        <div class="card">
+          <div class="card-body">
+            <table class="table table-hover" id="tabla-productos">
+              <tr>
+                <th>ID</th>
+                <th>Categoria</th>
+                <th>Nombre</th>
+                <th>Descripcion</th>
+                <th>Precio</th>
+                <th>Descuento Suscriptor</th>
+                <th>Descuento Oferta</th>
+              </tr>
+              <tr>
+                <td>423</td>
+                <td>Perro</td>
+                <td>Saco Alimento Dog Show</td>
+                <td>Saco Alimento Dog Show 3kg</td>
+                <td>$8000</td>
+                <td>2%</td>
+                <td>5%</td>
+              </tr>
+              <tr>
+                <td>521</td>
+                <td>Gato</td>
+                <td>Saco Alimento CatDog</td>
+                <td>Saco Alimento CatDog 1kg</td>
+                <td>$5000</td>
+                <td>2%</td>
+                <td>5%</td>
+              </tr>
+              <tr>
+                <td>128</td>
+                <td>Perro</td>
+                <td>Juguete Masticable</td>
+                <td>Jueguete Masticable PlayDog</td>
+                <td>$7000</td>
+                <td>2%</td>
+                <td>5%</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="footer"></footer>
+  <!--Bibliotecas-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+  <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.10.0/jquery.validate.min.js"></script>
+  <script src="js/Validate.js" type="text/javascript"></script>
+  <script src="JS/headerYFooter.js"></script>
+
+</body>
+
+</html>
